@@ -1,3 +1,8 @@
+import axios from "axios";
+
+axios 
+.get('https://lambda-times-api.herokuapp.com/topics')
+
 const Tabs = (topics) => {
   // TASK 3
   // ---------------------
@@ -39,6 +44,7 @@ const Tabs = (topics) => {
   divTabthree.textContent = topics[2];
 
   document.querySelector('.topics').appendChild(divTopics);
+
   return divTopics;
 };
 

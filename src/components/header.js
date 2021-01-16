@@ -1,5 +1,5 @@
 const Header = (title, date, temp) => {
-  // TASK 1
+  // TASK 1 
   // ---------------------
   // Implement this function taking `title`, `date` and `temp` as its 3 args and returning the markup below.
   // The tags used, the hierarchy of elements and their attributes must match the provided markup exactly!
@@ -38,22 +38,33 @@ const Header = (title, date, temp) => {
   headTitle.textContent = title;
   spanTemp.textContent = temp;
 
-  document.querySelector('.header-container').appendChild(header);
- 
+  
+  console.log(header);
   return header;
+  
 }
 
+
+
+ 
+
+
 const headerAppender = (selector) => {
+  console.log('1', selector)
   // TASK 2
   // ---------------------
   // Implement this function taking a css selector as its only argument.
   // It should create a header using the Header component above, passing arguments of your choosing.
   // It should append the header to the element in the DOM that matches the given selector.
   //
-const test = document.querySelector(selector).appendChild(Header('Lambda News', 'Jan 15', '12'));
 
+  console.log(document.querySelector)
+
+  const test = document.querySelector(selector).appendChild(Header('Lambda Times', 'Jan 26, 2021', '26'));
+  console.log('2', Header);
 return test;
 
 }
+
 
 export { Header, headerAppender }

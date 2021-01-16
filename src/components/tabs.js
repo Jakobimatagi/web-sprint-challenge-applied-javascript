@@ -55,7 +55,8 @@ const tabsAppender = (selector) => {
   // It should obtain topics from this endpoint: `https://lambda-times-api.herokuapp.com/topics`
   // Find the array of topics inside the response, and create the tabs using the Tabs component.
   // Append the tabs to the element in the DOM that matches the selector passed to the function.
-  //
+  const test = document.querySelector(selector).appendChild(Tabs());
+  return test; 
 };
 
 export { Tabs, tabsAppender };

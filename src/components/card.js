@@ -25,7 +25,7 @@ const Card = (article) => {
   const divAuthor = document.createElement('div');
   const divImg = document.createElement('div');
   const photo = document.createElement('img');
-  const authorName = document.createElement('span');
+  const authorsName = document.createElement('span');
 
 
   // add classes
@@ -42,10 +42,15 @@ const Card = (article) => {
   divCard.appendChild(divAuthor);
   divAuthor.appendChild(divImg);
   divImg.appendChild(photo);
-  divAuthor.appendChild(authorName);
+  divAuthor.appendChild(authorsName);
 
   // text content
 
+  divHeadline.textContent = article.headline;
+  authorsName.textContent = article.authorName;
+
+
+  return divCard;
 
 }
 
